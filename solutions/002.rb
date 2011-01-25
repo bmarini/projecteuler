@@ -7,6 +7,18 @@
 # four million, find the sum of the even-valued terms.
 
 class Fibonacci
+  def self.sequence
+    Enumerator.new do |yielder|
+      num = 1
+      fib = new
+
+      loop do
+        yielder.yield fib.term(num)
+        num += 1
+      end
+    end
+  end
+
   def initialize
     @cache = {}
   end
@@ -21,13 +33,7 @@ class Fibonacci
   end
 end
 
-n   = 1
-sum = 0
-fib = Fibonacci.new
-
-while fib.term(n) < 4_000_000
-  sum += fib.term(n) if fib.term(n) % 2 == 0
-  n   += 1
-end
-
-p sum
+p Fibonacci.sequence.
+    take_while { |n| n < 4_000_000 }.
+    select { |n| n % 2 == 0 }.
+    inject(0) { |m, n| m + n }
