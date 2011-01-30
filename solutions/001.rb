@@ -1,5 +1,4 @@
-$:.unshift( File.expand_path( File.dirname(__FILE__) ) )
-require 'euler_helpers'
+require_relative 'euler_helpers'
 
 # If we list all the natural numbers below 10 that are multiples of 3 or 5, we
 # get 3, 5, 6 and 9. The sum of these multiples is 23.

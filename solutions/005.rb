@@ -1,5 +1,4 @@
-$:.unshift( File.expand_path( File.dirname(__FILE__) ) )
-require 'euler_helpers'
+require_relative 'euler_helpers'
 
 # 2520 is the smallest number that can be divided by each of the numbers from 1
 # to 10 without any remainder.

@@ -1,5 +1,4 @@
-$:.unshift( File.expand_path( File.dirname(__FILE__) ) )
-require 'euler_helpers'
+require_relative 'euler_helpers'
 
 # The prime factors of 13195 are 5, 7, 13 and 29.
 # 

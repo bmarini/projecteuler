@@ -1,5 +1,4 @@
-$:.unshift( File.expand_path( File.dirname(__FILE__) ) )
-require 'euler_helpers'
+require_relative 'euler_helpers'
 
 # The sum of the squares of the first ten natural numbers is,
 #
