@@ -6,6 +6,6 @@ end
 
 module Enumerable
   def sum
-    inject { |sum, el| sum + el }
+    reduce(:+)
   end
 end

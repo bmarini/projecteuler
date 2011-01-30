@@ -9,7 +9,7 @@ require 'euler_helpers'
 # Method 1
 p (1...1000).select { |n| n.multiple?(3) || n.multiple?(5) }.sum
 
-# Method 2: Creating an infinite sequence
+# Method 2: Creating an infinite series
 seq = Enumerator.new do |yielder|
   num = 1
 
